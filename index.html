@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        li,
+        ul {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h3 class="text-center">Available Budget in <span class="date"></span></h3>
+                <h1 class='Money text-center'></h1>
+                <h2 class="income text-center"></h2>
+                <h2 class="expense text-center"></h2>
+            </div>
+            <div class="col-sm-12 text-center">
+                <form class="form-inline">
+                    <select class="form-control selection">
+                        <option value='choose'>Choose one</option>
+                        <option value='addition'>+</option>
+                        <option value='deduction'>-</option>
+                    </select>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="description" placeholder="Add description">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="value" placeholder="value">
+                    </div>
+                    <button type="submit" class="btn btn-default btn">Click</button>
+                </form>
+            </div>
+            <div class="col-sm-6 text-center">
+                <h3>Income</h3>
+                <ul class='incomeList'>
+
+                </ul>
+            </div>
+            <div class="col-sm-6 text-center">
+                <h3>Expense</h3>
+                <ul class='expenseList'>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDmw37oNZ3Nm9cHwiGl4t0_RkYpLYIp8oI",
+            authDomain: "vuejs-http-e03f6.firebaseapp.com",
+            databaseURL: "https://vuejs-http-e03f6.firebaseio.com",
+            projectId: "vuejs-http-e03f6",
+            storageBucket: "vuejs-http-e03f6.appspot.com",
+            messagingSenderId: "28448157533"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="index2.js"></script>
+</body>
+
+</html>
